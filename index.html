@@ -7,20 +7,22 @@
   <style>
     * {
       box-sizing: border-box;
-    }
+}
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f2f2f7;
-      color: #1a1a1a;
-    }
-    
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top left, #1a0033, #000000);
+  color: #e0d6ff;
+  background-attachment: fixed;
+}
+
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #39c3ff, #25b3f5);
+  background: linear-gradient(90deg, #5f27cd, #341f97);
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -28,7 +30,7 @@
 }
 
 .navbar-logo {
-  color: white;
+  color: #fff;
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -42,104 +44,98 @@
 }
 
 .navbar-menu li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .navbar-menu li a:hover {
-  color: #004080;
+  color: #ff9ff3;
 }
-    header {
-  background: linear-gradient(135deg, #1e90ff, #00bfff);
+
+.navbar-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #6c5ce7, #341f97);
   color: #fff;
   padding: 4rem 2rem;
   text-align: center;
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.4);
 }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
 
-    header p {
+header p {
   font-size: 1.3rem;
-  color: #e0e0e0;
+  color: #d6c3ff;
 }
 
-    section {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 1.5rem;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
+/* Secciones */
+section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background-color: #1b0a2a;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(240, 185, 255, 0.15);
+}
 
-    .section-title {
-  color: #1a1a1a; /* Negro brillante */
+/* Títulos */
+.section-title {
+  color: #e0d6ff;
   font-size: 2rem;
   margin-bottom: 1rem;
-  border-bottom: 3px solid #333333; /* Línea gris oscura */
+  border-bottom: 3px solid #9b59b6;
   padding-bottom: 0.5rem;
 }
 
-    .skills-bar {
-      margin: 1rem 0;
-    }
+/* Barras de habilidades */
+.skills-bar {
+  margin: 1rem 0;
+}
 
-    .skill-name {
-      margin-bottom: 0.3rem;
-    }
+.skill-name {
+  margin-bottom: 0.3rem;
+}
 
-    .bar {
-      background: #eee;
-      border-radius: 20px;
-      overflow: hidden;
-    }
+.bar {
+  background: #333;
+  border-radius: 20px;
+  overflow: hidden;
+}
 
-   .bar-fill {
+.bar-fill {
   height: 20px;
-  background: #333333; /* Relleno gris oscuro */
+  background: linear-gradient(to right, #9b59b6, #8e44ad);
   width: 0;
   border-radius: 20px;
   transition: width 2s ease;
 }
 
-    .job, .study {
-      margin-bottom: 1.5rem;
-    }
+/* Estudios y trabajos */
+.job, .study {
+  margin-bottom: 1.5rem;
+}
 
-    .job h3, .study h3 {
+.job h3, .study h3 {
   margin: 0;
-  color: #1a1a1a;
+  color: #dcd6f7;
 }
 
-    footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: #1a1a1a; /* Negro brillante */
-  color: #f0f0f0;
-}
-
-    .qr {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .qr img {
-  width: 150px;
-  height: 150px;
-  border: 4px solid #333333; /* Gris oscuro */
-  border-radius: 10px;
-}
-
-   .qr a {
-  color: #1a1a1a;
-  font-weight: bold;
-}
-    #inicio .about-container {
+/* Imagen perfil */
+#inicio .about-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -151,23 +147,121 @@
 }
 
 #inicio .about-image img {
-  width: 200px; /* Ajusta el tamaño de la imagen según lo necesites */
+  width: 200px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(200, 100, 255, 0.3);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #000000;
+  color: #a29bfe;
+}
+
+/* QR contacto */
+.qr {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.qr img {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #8e44ad;
+  border-radius: 10px;
+}
+
+.qr a {
+  color: #d6c3ff;
+  font-weight: bold;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #341f97;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+    .galaxy-btn {
+  background: linear-gradient(135deg, #8e44ad, #5f27cd);
+  color: #fff;
+  border: 2px solid #b084f7;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
+}
+
+.galaxy-btn:hover {
+  background: linear-gradient(135deg, #b084f7, #9b59b6);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 200, 255, 0.8), 0 0 40px rgba(155, 89, 182, 0.6);
+  transform: scale(1.05);
+}
+
+/* ==== TABLAS GALAXIA ==== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #1e0033;
+  border: 2px solid #6c5ce7;
+  box-shadow: 0 0 15px rgba(200, 100, 255, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #4b0082;
+  color: #e0d6ff;
+}
+
+th {
+  background-color: #341f97;
+  color: #ffffff;
+  text-shadow: 0 0 5px #9b59b6;
+}
+
+tr:hover {
+  background-color: rgba(138, 43, 226, 0.1);
+  transition: background 0.3s;
 }
   </style>
 </head>
 <body>
-  <nav class="navbar">
+ <nav class="navbar">
   <div class="navbar-logo">Miguel Orduz</div>
-  <ul class="navbar-menu">
+  <button class="navbar-toggle" id="navbarToggle">&#9776;</button>
+  <ul class="navbar-menu" id="navbarMenu">
     <li><a href="#inicio">Inicio</a></li>
     <li><a href="#blog">Blog</a></li>
     <li><a href="#habilidades">Habilidades</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="#ingenieria">Ingeniería Web</a></li>
   </ul>
+</nav>
 </nav>
   <header>
     <h1>Miguel Orduz</h1>
@@ -179,6 +273,7 @@
   <div class="about-container">
     <div class="about-text">
       <p>¡Hola! Soy Miguel Orduz, un apasionado de los videojuegos y el desarrollo de software. Actualmente doy soporte a equipos Mac, Windows y a apps corporativas como Office, Adobe, Dynamics 365, Okta y Paige. Me encanta aprender nuevas tecnologías y crear experiencias interactivas.</p>
+      <button class="galaxy-btn">Ver más</button>
     </div>
     <div class="about-image">
       <img src="ruta-de-tu-imagen.jpg" alt="Imagen de Miguel Orduz" />
@@ -304,6 +399,7 @@
     <li><strong>MVC (Modelo-Vista-Controlador):</strong> Patrón que separa la lógica de la aplicación (modelo), la interfaz de usuario (vista) y la entrada del usuario (controlador).</li>
     <li><strong>Cliente-Servidor (C/S):</strong> Modelo donde el cliente solicita información o servicios y el servidor responde. Es la base de Internet.</li>
   </ul>
+      <button class="galaxy-btn">Descargar resumen PDF</button>
 </section>
   
   <section id="contacto">
@@ -312,6 +408,7 @@
       <p>Escanea el código o haz clic para iniciar conversación:</p>
       <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/3142415126" alt="Código QR WhatsApp">
       <p><a href="https://wa.me/3142415126" target="_blank">Ir a WhatsApp</a></p>
+      <button class="galaxy-btn">Chatear en WhatsApp</button>
     </div>
   </section>
 
@@ -339,6 +436,9 @@
         }, 300);
       });
     });
+    document.getElementById("navbarToggle").addEventListener("click", () => {
+  document.getElementById("navbarMenu").classList.toggle("active");
+});
   </script>
 
 </body>
