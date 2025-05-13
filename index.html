@@ -436,7 +436,7 @@ tr:hover {
     <li><strong>MVC (Modelo-Vista-Controlador):</strong> Patrón que separa la lógica de la aplicación (modelo), la interfaz de usuario (vista) y la entrada del usuario (controlador).</li>
     <li><strong>Cliente-Servidor (C/S):</strong> Modelo donde el cliente solicita información o servicios y el servidor responde. Es la base de Internet.</li>
   </ul>
-      <button class="galaxy-btn">Descargar resumen PDF</button>
+      <button class="galaxy-btn" id="downloadBtn">Descargar resumen PDF</button>
 </section>
   
   <section id="contacto">
@@ -477,6 +477,18 @@ tr:hover {
   document.getElementById("navbarMenu").classList.toggle("active");
 });
   </script>
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+      const pdfUrl = 'resumen.pdf'; // Asegúrate de que esta ruta sea correcta
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = 'Resumen.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+
 
 </body>
 </html>
