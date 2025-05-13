@@ -263,25 +263,25 @@ tr:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('https://raw.githubusercontent.com/miguelorduz/star-bg/main/stars.png') repeat;
+  background: url('https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif') repeat;
   animation: moveStars 60s linear infinite;
   z-index: 0;
   opacity: 0.3;
+}
+
+@keyframes moveStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 500px;
+  }
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   text-align: center;
-}
-
-@keyframes moveStars {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 10000px 5000px;
-  }
 }
   </style>
 </head>
