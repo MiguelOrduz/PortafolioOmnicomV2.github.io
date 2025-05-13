@@ -445,7 +445,7 @@ tr:hover {
       <p>Escanea el código o haz clic para iniciar conversación:</p>
       <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/3142415126" alt="Código QR WhatsApp">
       <p><a href="https://wa.me/3142415126" target="_blank">Ir a WhatsApp</a></p>
-      <button class="galaxy-btn">Chatear en WhatsApp</button>
+     <button class="galaxy-btn" id="whatsappBtn">Chatear en WhatsApp</button>
     </div>
   </section>
 
@@ -488,7 +488,11 @@ tr:hover {
       document.body.removeChild(link);
     });
   </script>
-
+<script>
+  document.getElementById('whatsappBtn').addEventListener('click', function() {
+    window.open('https://wa.me/3142415126', '_blank');
+  });
+</script>
 
 </body>
 </html>
